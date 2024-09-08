@@ -1,9 +1,17 @@
+/*
+ * @Date: 2024-09-07 21:25:31
+ * @Description: 功能：
+ */
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
-
+import vercel from 'vite-plugin-vercel';
 export default defineConfig({
-  plugins: [react()],
+  server: {
+    port: process.env.PORT as unknown as number,
+  },
+  // plugins: [react()],
+  plugins: [react(),vercel()],
   resolve: {
     alias: [
       {
