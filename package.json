@@ -19,6 +19,7 @@
     "clsx": "^1.2.1",
     "emoji-mart": "^5.2.2",
     "file-saver": "^2.0.5",
+    "hono": "^4.5.11",
     "html-to-image": "^1.10.8",
     "mobx": "^6.6.2",
     "mobx-react-lite": "^3.4.0",

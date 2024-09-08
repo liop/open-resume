@@ -2,10 +2,18 @@
  * @Date: 2024-09-08 21:16:23
  * @Description: 功能：
  */
-import type { VercelRequest, VercelResponse } from "@vercel/node";
+import { Hono } from 'hono'
+import { handle } from 'hono/vercel'
 
-export const edge = true;
+export const runtime = 'edge'
 
-export default async function handler(request: VercelRequest, response: VercelResponse) {
-  return response.send("OK");
-}
+const app = new Hono().basePath('/api')
+
+app.get('/hello', (c) => {
+  return c.json({
+    message: 'Hello Next.js!',
+  })
+})
+
+export const GET = handle(app)
+export const POST = handle(app)
