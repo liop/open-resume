@@ -16,9 +16,9 @@ export const headers = {
 export const streaming = true;
 
 // Enable Incremental Static Regeneration for this endpoint
-export const isr = {
-  expiration: 30,
-};
+// export const isr = {
+//   expiration: 30,
+// };
 
 export default async function handler() {
   return new Response('Edge Function: OK', {
