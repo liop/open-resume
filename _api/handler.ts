@@ -2,10 +2,15 @@
  * @Date: 2024-09-08 21:16:23
  * @Description: 功能：
  */
-export const config = {
-  runtime: 'edge',
-};
+import type { VercelRequest, VercelResponse } from '@vercel/node';
  
-export default (request: Request) => {
-  return new Response(`Hello, from ${request.url} I'm now an Edge Function!`);
-};
+export default function handler(
+  request: VercelRequest,
+  response: VercelResponse,
+) {
+  response.status(200).json({
+    body: request.body,
+    query: request.query,
+    cookies: request.cookies,
+  });
+}

@@ -15,6 +15,7 @@
     "@formily/core": "^2.2.5",
     "@formily/react": "^2.2.5",
     "@formily/reactive": "^2.2.5",
+    "@vercel/node": "^3.2.12",
     "antd": "^4.23.2",
     "clsx": "^1.2.1",
     "emoji-mart": "^5.2.2",
